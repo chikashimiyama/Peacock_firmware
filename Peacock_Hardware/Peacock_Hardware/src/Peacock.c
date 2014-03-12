@@ -133,9 +133,9 @@ uint8_t clip(uint8_t in){
 	return in;
 }
 
-void getRowData(volatile uint8_t *targetPort, uint8_t targetPin, uint8_t *buffer){
+uint16_t getRowData(volatile uint8_t *targetPort, uint8_t targetPin, uint8_t *buffer){
 	uint8_t command, rvalue;
-
+	uint16_t sum = 0;
 	for(int i = 0; i < COLUMN; i++){
 		*targetPort &= ~(1 << targetPin); //pin LO - start exchange
 		command = (SPI_SINGLE_MODE_MASK | i) << 2; // adjust to 8 bit
@@ -143,16 +143,17 @@ void getRowData(volatile uint8_t *targetPort, uint8_t targetPin, uint8_t *buffer
 		rvalue = spiReadWrite(0);
 		*targetPort |= 1 << targetPin; //pin HI - end exchange
 		buffer[i] = clip(rvalue);
-		_delay_us(100);
+		sum += buffer[i];
 	}
+	return sum;
 }
 
 
 int main(void)
 {
-	uint8_t buffer[NUM_SENSORS + 3];
+	uint8_t buffer[NUM_SENSORS + 4];
 	uint8_t cmd[5];	
-	
+	uint16_t checksum;
 
 	setupHardware();
 	setupLED();
@@ -160,19 +161,19 @@ int main(void)
 	setupButtons();
 	
 	_delay_ms(100);
-	lcd_init(LCD_DISP_ON);
-	lcd_clrscr();
-	lcd_puts("Peacock ver. 0.2\n");
-	lcd_puts("by C.Miyama");
+//	lcd_init(LCD_DISP_ON);
+//	lcd_clrscr();
+//	lcd_puts("Peacock ver. 0.2\n");
+//	lcd_puts("by C.Miyama");
 	
 	_delay_ms(1000);
 	GlobalInterruptEnable();
 
 	while(1)
 	{
-		lcd_clrscr();
-		lcd_puts("fuck");
-		_delay_ms(10);
+		//lcd_clrscr();
+		//lcd_puts("fuck");
+		//_delay_ms(10);
 		
 		if(gCommand > 0){
 			cmd[0] = START_DELIMETER;
@@ -183,21 +184,22 @@ int main(void)
 			CDC_Device_SendData(&VirtualSerial_CDC_Interface, (void*)cmd, 4);
 		}
 		
-
 		buffer[0] = START_DELIMETER;
 		buffer[1] = DATA_PACKET;
-		getRowData(&SPI_CS0_PORT, SPI_CS0_PIN, &buffer[2] );
-		getRowData(&SPI_CS1_PORT, SPI_CS1_PIN, &buffer[COLUMN + 2] );
-		getRowData(&SPI_CS2_PORT, SPI_CS2_PIN, &buffer[COLUMN *2 + 2] );
-		getRowData(&SPI_CS3_PORT, SPI_CS3_PIN, &buffer[COLUMN *3 + 2] );
-		getRowData(&SPI_CS4_PORT, SPI_CS4_PIN, &buffer[COLUMN *4 + 2] );
-		buffer[37] = END_DELIMETER;
-		CDC_Device_SendData(&VirtualSerial_CDC_Interface, (void*)buffer, 38); // 35x data 2x delimeter 1x type 1x checksum
+		checksum = buffer[1];
+		checksum += getRowData(&SPI_CS1_PORT, SPI_CS1_PIN, &buffer[2] );
+		checksum += getRowData(&SPI_CS2_PORT, SPI_CS2_PIN, &buffer[COLUMN + 2] );
+		checksum += getRowData(&SPI_CS3_PORT, SPI_CS3_PIN, &buffer[COLUMN *2 + 2] );
+		checksum += getRowData(&SPI_CS4_PORT, SPI_CS4_PIN, &buffer[COLUMN *3 + 2] );
+		checksum += getRowData(&SPI_CS0_PORT, SPI_CS0_PIN, &buffer[COLUMN *4 + 2] );
+		buffer[37] = (uint8_t)(checksum & 0xFF); // down cast 32
+		buffer[38] = END_DELIMETER;
+		CDC_Device_SendData(&VirtualSerial_CDC_Interface, (void*)buffer, 39); // 35x data 2x delimeter 1x type 1x checksum
 		
 		CDC_Device_ReceiveByte(&VirtualSerial_CDC_Interface);
 		CDC_Device_USBTask(&VirtualSerial_CDC_Interface);
 		USB_USBTask();
-		_delay_ms(10);
+
 		
 	}
 }
