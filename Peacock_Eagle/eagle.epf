@@ -22,11 +22,13 @@ UsedLibrary="/Applications/EAGLE-6.5.0/lbr/supply1.lbr"
 UsedLibrary="/Applications/EAGLE-6.5.0/lbr/supply2.lbr"
 UsedLibrary="/Applications/EAGLE-6.5.0/lbr/switch.lbr"
 UsedLibrary="/Applications/EAGLE-6.5.0/lbr/texas.lbr"
+UsedLibrary="/Users/chikashi/Documents/eagle_external_libraries/SparkFun-Connectors.lbr"
+UsedLibrary="/Users/chikashi/Documents/eagle_external_libraries/myLibrary.lbr"
 UsedLibrary="adc0838.lbr"
 
 [Win_1]
 Type="Control Panel"
-Loc="360 248 959 647"
+Loc="297 245 1277 877"
 State=2
 Number=0
 
