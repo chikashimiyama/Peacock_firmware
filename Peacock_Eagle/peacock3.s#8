@@ -20248,7 +20248,6 @@ Source: www.kingbright.com</description>
 <wire x1="149.86" y1="190.5" x2="149.86" y2="119.38" width="0.1524" layer="91"/>
 <wire x1="149.86" y1="119.38" x2="149.86" y2="45.72" width="0.1524" layer="91"/>
 <wire x1="175.26" y1="45.72" x2="149.86" y2="45.72" width="0.1524" layer="91"/>
-<wire x1="149.86" y1="332.74" x2="175.26" y2="332.74" width="0.1524" layer="91"/>
 <pinref part="U$2" gate="G$1" pin="DIN"/>
 <pinref part="U$6" gate="G$1" pin="DIN"/>
 <wire x1="175.26" y1="119.38" x2="149.86" y2="119.38" width="0.1524" layer="91"/>
@@ -20259,6 +20258,8 @@ Source: www.kingbright.com</description>
 <pinref part="U$3" gate="G$1" pin="DIN"/>
 <wire x1="175.26" y1="190.5" x2="149.86" y2="190.5" width="0.1524" layer="91"/>
 <junction x="149.86" y="190.5"/>
+<pinref part="U$5" gate="G$1" pin="DIN"/>
+<wire x1="175.26" y1="332.74" x2="149.86" y2="332.74" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="MISO" class="0">
@@ -20358,9 +20359,10 @@ Source: www.kingbright.com</description>
 <net name="N$39" class="0">
 <segment>
 <wire x1="142.24" y1="248.92" x2="142.24" y2="335.28" width="0.1524" layer="91"/>
-<wire x1="175.26" y1="335.28" x2="142.24" y2="335.28" width="0.1524" layer="91"/>
 <pinref part="ATMEGA32U2" gate="G$1" pin="PB0(SS/PCINT0)"/>
 <wire x1="88.9" y1="248.92" x2="142.24" y2="248.92" width="0.1524" layer="91"/>
+<pinref part="U$5" gate="G$1" pin="~CS"/>
+<wire x1="175.26" y1="335.28" x2="142.24" y2="335.28" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$40" class="0">
@@ -20383,10 +20385,11 @@ Source: www.kingbright.com</description>
 </net>
 <net name="N$48" class="0">
 <segment>
-<wire x1="175.26" y1="193.04" x2="144.78" y2="193.04" width="0.1524" layer="91"/>
 <wire x1="144.78" y1="193.04" x2="144.78" y2="236.22" width="0.1524" layer="91"/>
 <pinref part="ATMEGA32U2" gate="G$1" pin="PB5(PCINT5)"/>
 <wire x1="144.78" y1="236.22" x2="88.9" y2="236.22" width="0.1524" layer="91"/>
+<pinref part="U$3" gate="G$1" pin="~CS"/>
+<wire x1="175.26" y1="193.04" x2="144.78" y2="193.04" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$47" class="0">
@@ -20394,7 +20397,8 @@ Source: www.kingbright.com</description>
 <pinref part="ATMEGA32U2" gate="G$1" pin="PB4(T1/PCINT4)"/>
 <wire x1="88.9" y1="238.76" x2="144.78" y2="238.76" width="0.1524" layer="91"/>
 <wire x1="144.78" y1="238.76" x2="144.78" y2="264.16" width="0.1524" layer="91"/>
-<wire x1="144.78" y1="264.16" x2="175.26" y2="264.16" width="0.1524" layer="91"/>
+<pinref part="U$4" gate="G$1" pin="~CS"/>
+<wire x1="175.26" y1="264.16" x2="144.78" y2="264.16" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$19" class="0">
@@ -20475,62 +20479,64 @@ Source: www.kingbright.com</description>
 <net name="N$32" class="0">
 <segment>
 <pinref part="JP27" gate="G$1" pin="1"/>
-<wire x1="281.94" y1="127" x2="266.7" y2="127" width="0.1524" layer="91"/>
-<wire x1="266.7" y1="127" x2="266.7" y2="121.92" width="0.1524" layer="91"/>
+<wire x1="281.94" y1="127" x2="256.54" y2="127" width="0.1524" layer="91"/>
+<wire x1="256.54" y1="127" x2="256.54" y2="121.92" width="0.1524" layer="91"/>
 <pinref part="U$6" gate="G$1" pin="CH6"/>
-<wire x1="266.7" y1="121.92" x2="205.74" y2="121.92" width="0.1524" layer="91"/>
+<wire x1="256.54" y1="121.92" x2="205.74" y2="121.92" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$33" class="0">
 <segment>
 <pinref part="JP28" gate="G$1" pin="1"/>
-<wire x1="281.94" y1="142.24" x2="264.16" y2="142.24" width="0.1524" layer="91"/>
-<wire x1="264.16" y1="142.24" x2="264.16" y2="124.46" width="0.1524" layer="91"/>
+<wire x1="281.94" y1="142.24" x2="254" y2="142.24" width="0.1524" layer="91"/>
+<wire x1="254" y1="142.24" x2="254" y2="124.46" width="0.1524" layer="91"/>
 <pinref part="U$6" gate="G$1" pin="CH7"/>
-<wire x1="264.16" y1="124.46" x2="205.74" y2="124.46" width="0.1524" layer="91"/>
+<wire x1="254" y1="124.46" x2="205.74" y2="124.46" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$52" class="0">
 <segment>
-<wire x1="264.16" y1="96.52" x2="264.16" y2="116.84" width="0.1524" layer="91"/>
-<wire x1="264.16" y1="116.84" x2="205.74" y2="116.84" width="0.1524" layer="91"/>
+<wire x1="259.08" y1="96.52" x2="259.08" y2="116.84" width="0.1524" layer="91"/>
 <pinref part="JP25" gate="G$1" pin="1"/>
-<wire x1="264.16" y1="96.52" x2="281.94" y2="96.52" width="0.1524" layer="91"/>
+<wire x1="259.08" y1="96.52" x2="281.94" y2="96.52" width="0.1524" layer="91"/>
+<pinref part="U$6" gate="G$1" pin="CH4"/>
+<wire x1="259.08" y1="116.84" x2="205.74" y2="116.84" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$55" class="0">
 <segment>
-<wire x1="259.08" y1="66.04" x2="259.08" y2="111.76" width="0.1524" layer="91"/>
-<wire x1="259.08" y1="111.76" x2="205.74" y2="111.76" width="0.1524" layer="91"/>
+<wire x1="254" y1="66.04" x2="254" y2="111.76" width="0.1524" layer="91"/>
 <pinref part="JP23" gate="G$1" pin="1"/>
-<wire x1="259.08" y1="66.04" x2="281.94" y2="66.04" width="0.1524" layer="91"/>
+<wire x1="254" y1="66.04" x2="281.94" y2="66.04" width="0.1524" layer="91"/>
+<pinref part="U$6" gate="G$1" pin="CH2"/>
+<wire x1="254" y1="111.76" x2="205.74" y2="111.76" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$60" class="0">
 <segment>
-<wire x1="256.54" y1="50.8" x2="256.54" y2="109.22" width="0.1524" layer="91"/>
+<wire x1="251.46" y1="50.8" x2="251.46" y2="109.22" width="0.1524" layer="91"/>
 <pinref part="U$6" gate="G$1" pin="CH1"/>
-<wire x1="256.54" y1="109.22" x2="205.74" y2="109.22" width="0.1524" layer="91"/>
+<wire x1="251.46" y1="109.22" x2="205.74" y2="109.22" width="0.1524" layer="91"/>
 <pinref part="JP22" gate="G$1" pin="1"/>
-<wire x1="256.54" y1="50.8" x2="281.94" y2="50.8" width="0.1524" layer="91"/>
+<wire x1="251.46" y1="50.8" x2="281.94" y2="50.8" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$66" class="0">
 <segment>
 <pinref part="U$6" gate="G$1" pin="CH5"/>
 <pinref part="JP26" gate="G$1" pin="1"/>
-<wire x1="281.94" y1="111.76" x2="266.7" y2="111.76" width="0.1524" layer="91"/>
-<wire x1="266.7" y1="111.76" x2="266.7" y2="119.38" width="0.1524" layer="91"/>
-<wire x1="266.7" y1="119.38" x2="205.74" y2="119.38" width="0.1524" layer="91"/>
+<wire x1="281.94" y1="111.76" x2="261.62" y2="111.76" width="0.1524" layer="91"/>
+<wire x1="261.62" y1="111.76" x2="261.62" y2="119.38" width="0.1524" layer="91"/>
+<wire x1="261.62" y1="119.38" x2="205.74" y2="119.38" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$54" class="0">
 <segment>
 <pinref part="U$6" gate="G$1" pin="CH3"/>
 <pinref part="JP24" gate="G$1" pin="1"/>
-<wire x1="281.94" y1="81.28" x2="261.62" y2="81.28" width="0.1524" layer="91"/>
-<wire x1="261.62" y1="81.28" x2="261.62" y2="114.3" width="0.1524" layer="91"/>
-<wire x1="261.62" y1="114.3" x2="205.74" y2="114.3" width="0.1524" layer="91"/>
+<wire x1="281.94" y1="81.28" x2="256.54" y2="81.28" width="0.1524" layer="91"/>
+<wire x1="256.54" y1="81.28" x2="256.54" y2="114.3" width="0.1524" layer="91"/>
+<wire x1="256.54" y1="114.3" x2="205.74" y2="114.3" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$2" class="0">
@@ -20728,7 +20734,44 @@ Source: www.kingbright.com</description>
 <errors>
 <approved hash="102,1,71.12,185.42,OUT,+3V3,,,,"/>
 <approved hash="104,1,27.94,218.44,ATMEGA32U2,VCC,+5V,,,"/>
+<approved hash="113,1,66.3617,295.91,LED1,,,,,"/>
 <approved hash="113,1,110.365,299.915,GND_SOCKET,,,,,"/>
+<approved hash="113,1,236.897,300.795,JP1,,,,,"/>
+<approved hash="113,1,236.897,316.035,JP2,,,,,"/>
+<approved hash="113,1,236.897,331.275,JP3,,,,,"/>
+<approved hash="113,1,236.897,346.515,JP4,,,,,"/>
+<approved hash="113,1,236.897,361.755,JP5,,,,,"/>
+<approved hash="113,1,236.897,376.995,JP6,,,,,"/>
+<approved hash="113,1,236.897,392.235,JP7,,,,,"/>
+<approved hash="113,1,282.617,211.895,JP8,,,,,"/>
+<approved hash="113,1,282.617,227.135,JP9,,,,,"/>
+<approved hash="113,1,282.617,242.375,JP10,,,,,"/>
+<approved hash="113,1,282.617,257.615,JP11,,,,,"/>
+<approved hash="113,1,282.617,272.855,JP12,,,,,"/>
+<approved hash="113,1,282.617,288.095,JP13,,,,,"/>
+<approved hash="113,1,282.617,303.335,JP14,,,,,"/>
+<approved hash="113,1,236.897,135.695,JP15,,,,,"/>
+<approved hash="113,1,236.897,150.935,JP16,,,,,"/>
+<approved hash="113,1,236.897,166.175,JP17,,,,,"/>
+<approved hash="113,1,236.897,181.415,JP18,,,,,"/>
+<approved hash="113,1,236.897,196.655,JP19,,,,,"/>
+<approved hash="113,1,236.897,211.895,JP20,,,,,"/>
+<approved hash="113,1,236.897,227.135,JP21,,,,,"/>
+<approved hash="113,1,285.157,46.7953,JP22,,,,,"/>
+<approved hash="113,1,285.157,62.0353,JP23,,,,,"/>
+<approved hash="113,1,285.157,77.2753,JP24,,,,,"/>
+<approved hash="113,1,285.157,92.5153,JP25,,,,,"/>
+<approved hash="113,1,285.157,107.755,JP26,,,,,"/>
+<approved hash="113,1,285.157,122.995,JP27,,,,,"/>
+<approved hash="113,1,285.157,138.235,JP28,,,,,"/>
+<approved hash="113,1,236.897,-26.8647,JP29,,,,,"/>
+<approved hash="113,1,236.897,-11.6247,JP30,,,,,"/>
+<approved hash="113,1,236.897,3.61527,JP31,,,,,"/>
+<approved hash="113,1,236.897,18.8553,JP32,,,,,"/>
+<approved hash="113,1,236.897,34.0953,JP33,,,,,"/>
+<approved hash="113,1,236.897,49.3353,JP34,,,,,"/>
+<approved hash="113,1,236.897,64.5753,JP35,,,,,"/>
+<approved hash="113,1,122.597,263.965,JP37,,,,,"/>
 </errors>
 </schematic>
 </drawing>
