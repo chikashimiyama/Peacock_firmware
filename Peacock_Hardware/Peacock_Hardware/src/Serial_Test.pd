@@ -12,9 +12,9 @@
 #X floatatom 332 293 5 0 0 0 - - -;
 #X obj 113 431 unpack 0 0 0 0 0 0 0;
 #X obj 103 468 vsl 15 128 0 255 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 149 1;
+-1 -1 50 1;
 #X obj 133 472 vsl 15 128 0 255 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 100 1;
+-1 -1 50 1;
 #X obj 158 476 vsl 15 128 0 255 0 0 empty empty empty 0 -9 0 10 -262144
 -1 -1 50 1;
 #X obj 188 480 vsl 15 128 0 255 0 0 empty empty empty 0 -9 0 10 -262144
@@ -24,7 +24,7 @@
 #X obj 243 477 vsl 15 128 0 255 0 0 empty empty empty 0 -9 0 10 -262144
 -1 -1 50 1;
 #X obj 274 482 vsl 15 128 0 255 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 100 1;
+-1 -1 50 1;
 #X msg 373 407 \$9 \$10 \$11 \$12 \$13 \$14 \$15;
 #X obj 371 442 unpack 0 0 0 0 0 0 0;
 #X obj 361 479 vsl 15 128 0 255 0 0 empty empty empty 0 -9 0 10 -262144
@@ -103,7 +103,7 @@
 #X obj 44 365 print;
 #X obj 76 247 route 252 253;
 #X obj 250 413 print;
-#X obj 168 357 print;
+#X obj 198 372 print;
 #X obj 140 332 list split 7;
 #X connect 0 0 4 0;
 #X connect 1 0 0 0;
@@ -170,4 +170,4 @@
 #X connect 66 0 7 0;
 #X connect 66 0 65 0;
 #X connect 66 1 69 0;
-#X connect 69 0 68 0;
+#X connect 69 0 11 0;

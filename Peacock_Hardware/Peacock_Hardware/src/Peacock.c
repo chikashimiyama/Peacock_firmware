@@ -136,6 +136,10 @@ int main(void)
 	_delay_ms(1000);
 	GlobalInterruptEnable();
 
+	for(int i = 0; i < NUM_SENSORS + 4; i ++){
+		buffer[i] = 0;
+	}
+	
 	while(1){
 		
 		if(gButtonUpdate > 0){
@@ -146,7 +150,6 @@ int main(void)
 			gButtonUpdate = 0;
 			CDC_Device_SendData(&VirtualSerial_CDC_Interface, (void*)cmd, 4);
 		}
-		_delay_ms(10);	
 		buffer[0] = START_DELIMETER;
 		buffer[1] = DATA_PACKET;
 		checksum = buffer[1];
@@ -162,7 +165,7 @@ int main(void)
 		CDC_Device_USBTask(&VirtualSerial_CDC_Interface);
 		USB_USBTask();
 
-		
+				
 	}
 }
 
