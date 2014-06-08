@@ -42,6 +42,13 @@ In order to improve the autonomy of the instrument, in the newest model of Peaco
 The box-shaped Peacock hardware consists of two parts;\bf{interface board} and \bf{main unit}.
 The interface board is 100mm x 60mm-sized PCB(printed circuit board). it mainly collect the data from all sensors, digitize them and forward it to the main unit. The main unit analyze the incoming data from the interface board and generates sound. optionally, the main unit visualize the incoming data.
 
+\begin{figure}[htbp]
+       \centering
+              \includegraphics[width=1\columnwidth]{interface_main}
+       \caption{interface board and main unit}
+       \label{fig:interface_main}
+\end{figure}
+
 \section{Interface Board} % (fold)
 
 The interface board is comprised of a Atmel AVR microcontroller, ATMega 32U2 and five external 12 bit ADCs, MCP3208, a LCD, 5 buttons and a LED. The main functionalities of the interface board are as follows:
@@ -76,13 +83,14 @@ The signal from infrared sensors employed by Peacock include significant amount 
 
 \subsubsection{data collection} % (fold)
 
-SPI 
+-SPI 
+-speed
 
-\subsubsection{Status indicationn} % (fold)
+\subsubsection{Status indication/manipulation} % (fold)
 
-A 2x16 LCD is attached on the side panel of the enclosure and it displays current status of the system. Users are able to change the setting of the system, using this LCD and the buttons, placed next to the LCD.
+A 2x16 LCD is attached on the side panel of the enclosure and it displays current status of the system. Users are able to change the setting of the system, and control the program for the sound generation, using this LCD and the buttons, placed next to the LCD.
 
-\subsubsection{Production of data packet} % (fold)
+\subsubsection{Production of safe data packet} % (fold)
 
 A data packet always start with a start delimiter(0xFF), followed by a data type specifier, main data, and ended with a check sum. 
 
@@ -92,7 +100,7 @@ In Peacock I, a FTDI chip bridges the UART messages from the AVR microcontroller
 However, by employing AVR ATMega 32U2, a microcontroller with a hardware USB controller, the newer version of Peacock is capable of sending data directly from the microcontroller to the host computer. For the development of the USB firmware, the LUFA (Lightweight USB Framework for AVRs)\cite{camera:lufa} was employed. The host computer recognize the Peacock PCB as a virtual serial device.
 
 \section{Main Unit} % (fold)
-A dedicated computer, placed next to the PCB board in the enclosure, runs Arch linux and automatically launch the PeacockApp, an OpenFrameworks\cite{openframeworks}-based application written in C++. This application receives the data from the microcontroller and send it to the following three modules. The gesture recognizer module analyze the incoming data and detects specific hand gesture, The synthesizer module is for sound production, and the visualizer module visualizes the incoming data.
+A dedicated Intel NUC computer, ultra Compact Form factor computer with intel Corei5 processor placed next to the PCB board in the enclosure, runs Arch linux and automatically launch the PeacockApp, an OpenFrameworks\cite{openframeworks}-based application written in C++. This application receives the data from the microcontroller and send it to the following three modules. The gesture recognizer module analyze the incoming data and detects specific hand gesture, The synthesizer module is for sound production, and the visualizer module visualizes the incoming data.
 
 \begin{enumerate}
        \item Gesture Recognizer(PckRecognizer)
