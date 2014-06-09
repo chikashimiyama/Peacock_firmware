@@ -50,7 +50,7 @@ The interface board is 100mm x 60mm-sized PCB(printed circuit board). It collect
 
 \section{Interface Board} % (fold)
 
-The interface board is comprised of a Atmel AVR microcontroller, ATMega 32U2 and five external 12 bit ADCs, MCP3208, a LCD, 5 buttons and a LED. The main functionalities of the interface board are as follows:
+The interface board is comprised of an Atmel AVR microcontroller, ATMega 32U2 and five external 12 bit ADCs, MCP3208, a LCD, 5 buttons and a LED. The main functionalities of the interface board are as follows:
 
 \begin{enumerate}
        \item stabilization of the sensor power supply, employing onboard capacitors.
@@ -138,7 +138,7 @@ In order to minimize the latency and maximize the efficiency of the data process
 
 \subsection{Sound Generator: PckSynthesizer}
 
-The sound generator modulede is currently programmed with Pd (Pure Data). ofxPd, an addon of oF(OpenFrameworks), enables the Peacock app to run Pd patches within the Peacock App. The Pd patches receives all data from the sensors, the result of analysis by the Gesture Recognizer, and the commands from buttons on the side panel and utilize it for the sound production.
+The sound generator modulede is currently programmed with Pd (Pure Data)\cite{Pd}. ofxPd\cite{ofxPd}, an addon of oF(OpenFrameworks), enables the Peacock app to run Pd patches within the Peacock App. The Pd patches receives all data from the sensors, the result of analysis by the Gesture Recognizer, and the commands from buttons on the side panel and utilize it for the sound production.
 
 \begin{figure}[htbp]
        \centering
@@ -149,7 +149,7 @@ The sound generator modulede is currently programmed with Pd (Pure Data). ofxPd,
  
 \subsection{Visualizer: PckVisualizer}
 
-Unlike piano, cello, or other acoustic instruments, the player of Peacock controls musical parameters by simply moving hand above the device; There is no physical feedback from the instrument. In order to improve accurate parameter control, pricise positioning and movements of the hands is necessary. For this end, a visualizer provides the performer with optical feedback.  The visualizer indicates the values of from 35 infrared sensors  the assumed position of hands, chronological trail of hand movement, and recognized gestures, in  3D model programmed with OpenGL. The renderered 3D images can be displayed by attaching an optional HDMI-compatible monitor to the device.
+Unlike piano, cello, or other acoustic instruments, the player of Peacock controls musical parameters by simply moving hand above the device; There is no physical feedback from the instrument. In order to improve accurate parameter control, pricise positioning and movements of the hands is necessary. For this end, a visualizer provides the performer with optical feedback.  The visualizer indicates the values of from 35 infrared sensors  the assumed position of hands, chronological trail of hand movement, and recognized gestures, in  3D model programmed with OpenGL\cite{OpenGL}. The renderered 3D images can be displayed by attaching an optional HDMI-compatible monitor to the device.
 The visualizer can be deactivated by the user by the buttons on the side of the enclosure.
 
 \begin{figure}[htbp]
