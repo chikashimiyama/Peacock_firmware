@@ -36,6 +36,13 @@ ISR(PCINT1_vect)
 	gCommand = (PINC << 4) & 0x07;
 }
 
+ISR(INT4_vect)
+{
+	_delay_ms(15);
+	gButtonUpdate = 1;
+	gCommand = (PINC << 4) & 0x07;
+}
+
 void setupHardware(void){
 	MCUSR &= ~(1 << WDRF); // no watch dog
 	wdt_disable();
@@ -61,9 +68,14 @@ void setupButtons(void){
 	BUTTON_BT0_PORT |= (1 << BUTTON_BT0_PIN); // pull up
 	BUTTON_BT1_PORT |= (1 << BUTTON_BT1_PIN); // pull up
 	BUTTON_BT2_PORT |= (1 << BUTTON_BT2_PIN); // pull up
-	
+	BUTTON_BT3_PORT |= (1 << BUTTON_BT3_PIN); // pull up
+
 	PCICR |=  1 << PCIE1;
 	PCMSK1 |= (1 << PCINT8) | (1 << PCINT9) | (1 << PCINT10);
+	
+	EICRB |= 1 << ISC40;
+	EIMSK |= 1 << INT4;
+	
 	
 }
 
@@ -104,7 +116,7 @@ uint8_t clip(uint8_t in){
 uint16_t getRowData(volatile uint8_t *targetPort, uint8_t targetPin, uint8_t *buffer){
 	uint8_t command, rvalue;
 	uint16_t sum = 0;
-	for(int i = 0; i < COLUMN; i++){
+	for(int i = 1; i < COLUMN+1; i++){
 		*targetPort &= ~(1 << targetPin); //pin LO - start exchange
 		command = (SPI_SINGLE_MODE_MASK | i) << 2; // adjust to 8 bit
 		spiReadWrite(command);
@@ -119,12 +131,12 @@ uint16_t getRowData(volatile uint8_t *targetPort, uint8_t targetPin, uint8_t *bu
 
 int main(void)
 {
-	uint8_t buffer[NUM_SENSORS + 4];
+	uint8_t buffer[NUM_SENSORS + 5];
 	uint8_t cmd[5];	
 	uint16_t checksum;
 
 	setupHardware();
-	//setupLED();
+	setupLED();
 	setupSPI();
 	setupButtons();
 	
@@ -154,18 +166,17 @@ int main(void)
 		buffer[1] = DATA_PACKET;
 		checksum = buffer[1];
 		checksum += getRowData(&SPI_CS0_PORT, SPI_CS0_PIN, &buffer[2] );
-		//checksum += getRowData(&SPI_CS1_PORT, SPI_CS1_PIN, &buffer[COLUMN + 2] );
-		//checksum += getRowData(&SPI_CS2_PORT, SPI_CS2_PIN, &buffer[COLUMN *2 + 2] );
-		//checksum += getRowData(&SPI_CS3_PORT, SPI_CS3_PIN, &buffer[COLUMN *3 + 2] );
-		//checksum += getRowData(&SPI_CS4_PORT, SPI_CS4_PIN, &buffer[COLUMN *4 + 2] );
-		buffer[37] = (uint8_t)(checksum & 0xFF); // down cast 32
-		buffer[38] = END_DELIMETER;
-		CDC_Device_SendData(&VirtualSerial_CDC_Interface, (void*)buffer, 39); // 35x data 2x delimeter 1x type 1x checksum
+		checksum += getRowData(&SPI_CS1_PORT, SPI_CS1_PIN, &buffer[COLUMN + 2] );
+		checksum += getRowData(&SPI_CS2_PORT, SPI_CS2_PIN, &buffer[COLUMN *2 + 2] );
+		checksum += getRowData(&SPI_CS3_PORT, SPI_CS3_PIN, &buffer[COLUMN *3 + 2] );
+		checksum += getRowData(&SPI_CS4_PORT, SPI_CS4_PIN, &buffer[COLUMN *4 + 2] );
+		buffer[38] = (uint8_t)(checksum & 0xFF); // down cast 32
+		if(buffer[38] > 0xFA){buffer[38] = 0xFA;}
+		buffer[39] = END_DELIMETER;
+		CDC_Device_SendData(&VirtualSerial_CDC_Interface, (void*)buffer, 40); // 35x data 2x delimeter 1x type 1x checksum
 		CDC_Device_ReceiveByte(&VirtualSerial_CDC_Interface);
 		CDC_Device_USBTask(&VirtualSerial_CDC_Interface);
 		USB_USBTask();
-
-				
 	}
 }
 
