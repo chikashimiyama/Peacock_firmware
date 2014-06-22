@@ -1,8 +1,42 @@
 \begin{thebibliography}{1}
 
+\bibitem{camera:lufa}
+D.~Camera.
+\newblock Lufa.
+\newblock http://www.fourwalledcubicle.com/LUFA.php.
+
+\bibitem{intel:nuc}
+Intel.
+\newblock Nuc.
+\newblock http://www.intel.com/content/www/us/en/nuc/overview.html.
+
 \bibitem{miyama:peacock}
 C.~Miyama.
 \newblock Peacock: the development of non-haptic performance interface.
-\newblock {\em Proceedings. NIME 2010}, 2010.
+\newblock In {\em Proceedings. NIME 2010}, 2010.
+
+\bibitem{openframeworks}
+openframeworks.
+\newblock http://openframeworks.jp.
+
+\bibitem{parallax:propeller}
+Parallax.
+\newblock Propeller.
+\newblock http://www.parallax.com/microcontrollers/propeller.
+
+\bibitem{Pd}
+M.~Puckette.
+\newblock Pure data.
+\newblock http://puredata.info.
+
+\bibitem{OpenGL}
+D.~Shreiner, G.~Sellers, J.~Kessenich, and B.~Licea-Kane.
+\newblock {\em OpenGL Programming Guide}.
+\newblock Addison-Wesley Professional, 8 edition, 2013.
+
+\bibitem{ofxPd}
+D.~Wilcox.
+\newblock ofxpd.
+\newblock http://https://github.com/danomatika/ofxPd.
 
 \end{thebibliography}

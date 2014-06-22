@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2014.5.13)  8 JUN 2014 14:46
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2014.6.11)  22 JUN 2014 02:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -218,23 +218,31 @@ LaTeX Font Info:    Try loading font information for T1+aer on input line 100.
 
 (/usr/local/texlive/2013/texmf-dist/tex/latex/ae/t1aer.fd
 File: t1aer.fd 1997/11/16 Font definitions for T1/aer.
-))) (./KHM.aux)
+)))
+(/usr/local/texlive/2013/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2005/11/14 v1.0j Standard LaTeX Color (DPC)
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/latexconfig/color.cfg
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package color Info: Driver file: pdftex.def on input line 130.
+)
+(./KHM.aux)
 \openout1 = `KHM.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 3.
-LaTeX Font Info:    ... okay on input line 3.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 3.
-LaTeX Font Info:    ... okay on input line 3.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 3.
-LaTeX Font Info:    ... okay on input line 3.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 3.
-LaTeX Font Info:    ... okay on input line 3.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 3.
-LaTeX Font Info:    ... okay on input line 3.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 3.
-LaTeX Font Info:    ... okay on input line 3.
-
-(/usr/local/texlive/2013/texmf-dist/tex/context/base/supp-pdf.mkii
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+ (/usr/local/texlive/2013/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count112
 \scratchdimen=\dimen131
@@ -346,105 +354,86 @@ Overfull \hbox (2.0pt too wide) in paragraph at lines 15--15
 <peacocks.pdf, id=1, 381.43103pt x 142.5345pt>
 File: peacocks.pdf Graphic file (type pdf)
  <use peacocks.pdf>
-Package pdftex.def Info: peacocks.pdf used on input line 30.
-(pdftex.def)             Requested size: 238.0pt x 88.93811pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-Overfull \hbox (23.6881pt too wide) in paragraph at lines 42--44
-\T1/aer/m/n/9 The box-shaped Pea-cock hard-ware con-sists of two parts;\T1/aer/
-bx/n/9 interface
- []
-
-
-Overfull \hbox (1.30934pt too wide) in paragraph at lines 42--44
-\T1/aer/bx/n/9 x 60mm-sized PCB(printed cir-cuit board). it mainly
- []
-
-<board.png, id=2, 299.1978pt x 249.0906pt>
-File: board.png Graphic file (type png)
- <use board.png>
-Package pdftex.def Info: board.png used on input line 59.
-(pdftex.def)             Requested size: 238.0pt x 198.14769pt.
-
-<Peacock_hardware.pdf, id=3, 292.01295pt x 371.30722pt>
-File: Peacock_hardware.pdf Graphic file (type pdf)
-
-<use Peacock_hardware.pdf>
-Package pdftex.def Info: Peacock_hardware.pdf used on input line 67.
-(pdftex.def)             Requested size: 238.0pt x 302.6382pt.
+Package pdftex.def Info: peacocks.pdf used on input line 24.
+(pdftex.def)             Requested size: 209.7877pt x 78.39421pt.
  [1{/usr/local/texlive/2013/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 
  <./peacocks.pdf>]
-Overfull \hbox (16.87468pt too wide) in paragraph at lines 87--88
-\T1/aer/bx/n/9 A data packet al-ways start with a start de-lim-iter(0xFF),
- []
+<interface_main.jpg, id=23, 256.96pt x 150.5625pt>
+File: interface_main.jpg Graphic file (type jpg)
+ <use interface_main.jpg>
+Package pdftex.def Info: interface_main.jpg used on input line 65.
+(pdftex.def)             Requested size: 231.26186pt x 135.50497pt.
+
+<board.png, id=24, 299.1978pt x 249.0906pt>
+File: board.png Graphic file (type png)
+ <use board.png>
+Package pdftex.def Info: board.png used on input line 80.
+(pdftex.def)             Requested size: 238.0pt x 198.14769pt.
 
 
-LaTeX Warning: Citation `camera:lufa' on page \thepage  undefined on input line
- 92.
+LaTeX Warning: Citation `atmel:avr' on page \thepage  undefined on input line 8
+6.
 
+<Peacock_hardware.pdf, id=25, 292.01295pt x 348.41768pt>
+File: Peacock_hardware.pdf Graphic file (type pdf)
 
-LaTeX Warning: Citation `openframeworks' on page \thepage  undefined on input l
-ine 95.
-
-
-Overfull \hbox (4.7981pt too wide) in paragraph at lines 95--96
-\T1/aer/bx/n/9 A ded-i-cated com-puter, placed next to the PCB board
- []
-
-
-Overfull \hbox (9.82274pt too wide) in paragraph at lines 95--96
-\T1/aer/bx/n/9 launch the Pea-cock-App, an OpenFrameworks[?]-based
- []
-
-<Peacock_app.pdf, id=26, 289.75752pt x 147.44485pt>
+<use Peacock_hardware.pdf>
+Package pdftex.def Info: Peacock_hardware.pdf used on input line 97.
+(pdftex.def)             Requested size: 238.0pt x 283.98183pt.
+ [2 <./interface_main.jpg> <./board.png> <./Peacock_hardware.pdf>] <Peacock_app
+.pdf, id=58, 289.75752pt x 130.98938pt>
 File: Peacock_app.pdf Graphic file (type pdf)
- <use Peacock_app.pdf>
-Package pdftex.def Info: Peacock_app.pdf used on input line 108.
-(pdftex.def)             Requested size: 238.0pt x 121.11029pt.
 
-[2 <./board.png> <./Peacock_hardware.pdf>] (./KHM.bbl)
-LaTeX Font Info:    Try loading font information for T1+aett on input line 163.
+<use Peacock_app.pdf>
+Package pdftex.def Info: Peacock_app.pdf used on input line 125.
+(pdftex.def)             Requested size: 238.0pt x 107.59386pt.
+
+Overfull \hbox (12.02243pt too wide) in paragraph at lines 149--150
+\T1/aer/m/n/9 (OpenFrameworks), en-ables the Pea-cock-App to run Pd patches
+ []
 
 
-(/usr/local/texlive/2013/texmf-dist/tex/latex/ae/t1aett.fd
-File: t1aett.fd 1997/11/16 Font definitions for T1/aett.
-)
+Package pdftex.def Warning: Option `bb' does not make sense,
+(pdftex.def)                using `viewport' instead on input line 157.
 
-LaTeX Font Warning: Font shape `T1/aett/bx/n' undefined
-(Font)              using `T1/aett/m/n' instead on input line 163.
+File: board.png Graphic file (type png)
+<use board.png>
+Package pdftex.def Info: board.png used on input line 157.
+(pdftex.def)             Requested size: 238.0pt x 198.14153pt.
 
-[3 <./Peacock_app.pdf>] (./KHM.aux)
+Overfull \hbox (1.4225pt too wide) in paragraph at lines 171--172
+\T1/aer/m/n/9 This project is funded by fel-low-ship pro-gram of the Academy
+ []
 
-LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+(./KHM.bbl
+Overfull \hbox (32.99463pt too wide) in paragraph at lines 9--12
+\T1/aer/m/n/9 http://www.intel.com/content/www/us/en/nuc/overview.html.  
+ []
 
- ) 
+) [3 <./Peacock_app.pdf>] (./KHM.aux) ) 
 Here is how much of TeX's memory you used:
- 3377 strings out of 493315
- 44001 string characters out of 6137904
- 116134 words of memory out of 5000000
- 6738 multiletter control sequences out of 15000+600000
- 50047 words of font info for 68 fonts, out of 8000000 for 9000
+ 3410 strings out of 493315
+ 44499 string characters out of 6137904
+ 117022 words of memory out of 5000000
+ 6769 multiletter control sequences out of 15000+600000
+ 49529 words of font info for 66 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 41i,10n,28p,687b,248s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2013/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
-exlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/local/tex
-live/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/local/te
-xlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texli
-ve/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb></usr/local/texlive
-/2013/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2013/t
-exmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2013/texmf-di
-st/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/t
-ype1/urw/times/utmr8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/t
-imes/utmri8a.pfb>
-Output written on KHM.pdf (3 pages, 853176 bytes).
+ 41i,11n,28p,619b,291s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2013/texmf-dist/font
+s/enc/dvips/base/8r.enc}</usr/local/texlive/2013/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmbx9.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmr9.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmti9.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/helvetic/u
+hvb8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.p
+fb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/l
+ocal/texlive/2013/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texli
+ve/2013/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on KHM.pdf (3 pages, 913345 bytes).
 PDF statistics:
- 114 PDF objects out of 1000 (max. 8388607)
- 62 compressed objects within 1 object stream
+ 111 PDF objects out of 1000 (max. 8388607)
+ 59 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 21 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 26 words of extra memory for PDF output out of 10000 (max. 10000000)
 

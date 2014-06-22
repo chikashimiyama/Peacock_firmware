@@ -29,7 +29,7 @@ UsedLibrary="adc0838.lbr"
 
 [Win_1]
 Type="Control Panel"
-Loc="346 179 945 578"
+Loc="135 388 734 787"
 State=2
 Number=0
 
