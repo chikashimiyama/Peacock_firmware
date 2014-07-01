@@ -170,10 +170,10 @@ int main(void)
 		checksum += getRowData(&SPI_CS2_PORT, SPI_CS2_PIN, &buffer[COLUMN *2 + 2] );
 		checksum += getRowData(&SPI_CS3_PORT, SPI_CS3_PIN, &buffer[COLUMN *3 + 2] );
 		checksum += getRowData(&SPI_CS4_PORT, SPI_CS4_PIN, &buffer[COLUMN *4 + 2] );
-		buffer[38] = (uint8_t)(checksum & 0xFF); // down cast 32
-		if(buffer[38] > 0xFA){buffer[38] = 0xFA;}
-		buffer[39] = END_DELIMETER;
-		CDC_Device_SendData(&VirtualSerial_CDC_Interface, (void*)buffer, 40); // 35x data 2x delimeter 1x type 1x checksum
+		buffer[37] = (uint8_t)(checksum & 0xFF); // down cast 32
+		if(buffer[37] > 0xFA){buffer[37] = 0xFA;}
+		buffer[38] = END_DELIMETER;
+		CDC_Device_SendData(&VirtualSerial_CDC_Interface, (void*)buffer, 39); // 35x data 2x delimeter 1x type 1x checksum
 		CDC_Device_ReceiveByte(&VirtualSerial_CDC_Interface);
 		CDC_Device_USBTask(&VirtualSerial_CDC_Interface);
 		USB_USBTask();
