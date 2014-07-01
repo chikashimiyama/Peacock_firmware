@@ -116,9 +116,9 @@ uint8_t clip(uint8_t in){
 uint16_t getRowData(volatile uint8_t *targetPort, uint8_t targetPin, uint8_t *buffer){
 	uint8_t command, rvalue;
 	uint16_t sum = 0;
-	for(int i = 1; i < COLUMN+1; i++){
+	for(int i = 0; i < COLUMN; i++){
 		*targetPort &= ~(1 << targetPin); //pin LO - start exchange
-		command = (SPI_SINGLE_MODE_MASK | i) << 2; // adjust to 8 bit
+		command = (SPI_SINGLE_MODE_MASK | (i+1)) << 2; // adjust to 8 bit
 		spiReadWrite(command);
 		rvalue = spiReadWrite(0);
 		*targetPort |= 1 << targetPin; //pin HI - end exchange
