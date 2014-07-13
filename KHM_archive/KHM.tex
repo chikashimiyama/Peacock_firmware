@@ -145,8 +145,7 @@ In order to minimize the latency and maximize the efficiency of the data process
 The {\it Gesture Recognizer} modules currently detects, the presence and number of hands above the hardware, the estimated position of two hands, and the centroid of each row and column. 
 If this module find some new infomation, notifications to other two modules will be immediately sent\ref{fig:modules}.
 
-Based on the information of hand positions, this module trances the trajectories of the hands and recognizes the gesture. For this end,  SVM (Supported Vector Machine), a common algorithm of machine learning was utilized.  The Gesture Recognition Toolkit by Nick Gillian was employed for 
-the implementation of the algorithm,
+Based on the information of hand positions, this module trances the trajectories of the hands and recognizes the gesture. For this end,  SVM (Supported Vector Machine), a common algorithm of machine learning was utilized.  The Gesture Recognition Toolkit by Nick Gillian was employed for the implementation of the algorithm,
 
 In the module, all found gestures are tested against learned gestures, using SVM algorithm, and output the likelihood. 
 
