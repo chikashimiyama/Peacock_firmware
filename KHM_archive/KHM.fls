@@ -111,8 +111,9 @@ INPUT /usr/local/texlive/2013/texmf-dist/tex/latex/base/ulasy.fd
 INPUT /usr/local/texlive/2013/texmf-dist/fonts/tfm/public/latex-fonts/lasy9.tfm
 INPUT /usr/local/texlive/2013/texmf-dist/fonts/tfm/public/latex-fonts/lasy6.tfm
 INPUT /usr/local/texlive/2013/texmf-dist/fonts/tfm/public/latex-fonts/lasy5.tfm
-INPUT peacocks.pdf
-INPUT peacocks.pdf
+INPUT /usr/local/texlive/2013/texmf-dist/fonts/tfm/public/ae/aeti9.tfm
+INPUT Peacocks.pdf
+INPUT Peacocks.pdf
 INPUT /usr/local/texlive/2013/texmf-dist/fonts/tfm/ptex/standard/tgoth9.tfm
 INPUT /usr/local/texlive/2013/texmf-dist/fonts/tfm/ptex/standard/goth9.tfm
 INPUT /usr/local/texlive/2013/texmf-dist/fonts/tfm/public/ae/aebx9.tfm
@@ -123,9 +124,8 @@ INPUT Peacock_hardware.pdf
 INPUT Peacock_hardware.pdf
 INPUT Peacock_app.pdf
 INPUT Peacock_app.pdf
-INPUT pd_patch.png
-INPUT board.png
+INPUT visualizer.png
+INPUT visualizer.png
 INPUT KHM.bbl
 INPUT KHM.bbl
-INPUT /usr/local/texlive/2013/texmf-dist/fonts/tfm/public/ae/aeti9.tfm
 INPUT KHM.aux

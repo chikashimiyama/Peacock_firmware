@@ -1,16 +1,16 @@
 # Fdb version 3
-["bibtex KHM"] 1403394510 "KHM.aux" "KHM.bbl" "KHM" 1403394514
+["bibtex KHM"] 1403726035 "KHM.aux" "KHM.bbl" "KHM" 1403726037
   "/usr/local/texlive/2013/texmf-dist/bibtex/bst/base/abbrv.bst" 1292289607 20329 b5fed53e10044d0f8112183785c759b1 ""
   "KHM-references.bib.bib" 0 -1 0 ""
-  "KHM.aux" 1403394511 3026 03ca7e13776cedeb2c7411bd7a9e3ba6 ""
+  "KHM.aux" 1403726036 2875 7f4a8a5ec9d845ee96ee56846ba8262b ""
   "KHM.bcf" 0 -1 0 ""
   (generated)
   "KHM.bbl"
-["dvipdf"] 1403394512 "KHM.dvi" "KHM.pdf" "KHM" 1403394514
-  "KHM.dvi" 1403394511 20680 bf57a627182062929141c6cc9cbbd43f "latex"
+["dvipdf"] 1403726037 "KHM.dvi" "KHM.pdf" "KHM" 1403726037
+  "KHM.dvi" 1403726036 20692 a2ae4322d2b8d5feda7157b1e66d6628 "latex"
   (generated)
   "KHM.pdf"
-["latex"] 1403394510 "KHM.tex" "KHM.dvi" "KHM" 1403394514
+["latex"] 1403726035 "KHM.tex" "KHM.dvi" "KHM" 1403726037
   "/usr/local/texlive/2013/texmf-dist/fonts/map/fontname/texfonts.map" 1272929888 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
   "/usr/local/texlive/2013/texmf-dist/fonts/tfm/adobe/helvetic/phvb8t.tfm" 1136768653 6628 34c39492c0adc454c1c199922bba8363 ""
   "/usr/local/texlive/2013/texmf-dist/fonts/tfm/adobe/helvetic/phvbo8t.tfm" 1136768653 6880 fe6c7967f27585f6fa9876f3af14edd2 ""
@@ -79,17 +79,16 @@
   "/usr/local/texlive/2013/texmf-dist/web2c/texmf.cnf" 1366045088 31707 0953c15448e216a6585e92ee639d2dc2 ""
   "/usr/local/texlive/2013/texmf-var/web2c/eptex/platex.fmt" 1402503770 3975630 e6ca63346b17895d047873285b1e8560 ""
   "/usr/local/texlive/2013/texmf.cnf" 1369923207 577 cbc827f6294276973a1952e86e8ad73a ""
-  "KHM.aux" 1403394511 3026 03ca7e13776cedeb2c7411bd7a9e3ba6 ""
-  "KHM.bbl" 1403375558 976 879ba1a8cdfb9be4f665b0c3755d5e3c "bibtex KHM"
-  "KHM.tex" 1403394502 12371 34b8cfd9179e6aae9e08f307ffddf5af ""
+  "KHM.aux" 1403726036 2875 7f4a8a5ec9d845ee96ee56846ba8262b ""
+  "KHM.bbl" 1403439925 1091 2c30445c126b63330c093ac1e2ea2ad2 "bibtex KHM"
+  "KHM.tex" 1403726033 12197 3947ac450ec376d32a3b4501a7c30434 ""
   "Peacock_app.pdf" 1403384060 220058 79bf6282411b8c90a2c1a4d49b8dd1f4 ""
-  "Peacock_hardware.pdf" 1402168589 272772 c140158474185ce58ff20106f903d983 ""
+  "Peacock_hardware.pdf" 1403396477 273074 749e1c7cd3518e1d53b8e1da6bc62e00 ""
+  "Peacocks.pdf" 1402161076 373854 3486e64949f4e856b80220987709b334 ""
   "board" 0 -1 0 ""
-  "board.png" 1402151548 57795 05ec4709b53d3a34b7e9f9c353e8b25b ""
   "interface_main.jpg" 1403352032 69273 30929e27dc3f907d6fcafb01c3d0287e ""
   "nime-alternate.cls" 1403358211 58607 48ccd83a281dc14218c32a0d1fb52c96 ""
-  "pd_patch.png" 1402323634 56412 a239cc91d8eac9c70a8cd17b0b46751b ""
-  "peacocks.pdf" 1402161076 373854 3486e64949f4e856b80220987709b334 ""
+  "visualizer.png" 1403725895 40176 59194700822fa1a1f404ba260d22c878 ""
   (generated)
   "KHM.dvi"
   "KHM.log"

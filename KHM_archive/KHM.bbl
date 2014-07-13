@@ -5,6 +5,11 @@ D.~Camera.
 \newblock Lufa.
 \newblock http://www.fourwalledcubicle.com/LUFA.php.
 
+\bibitem{atmel:avr}
+A.~Corporation.
+\newblock Atmega32u2.
+\newblock http://www.atmel.com/devices/atmega32u2.aspx.
+
 \bibitem{intel:nuc}
 Intel.
 \newblock Nuc.
