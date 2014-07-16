@@ -1,4 +1,4 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
 \bibitem{camera:lufa}
 D.~Camera.
@@ -9,6 +9,11 @@ D.~Camera.
 A.~Corporation.
 \newblock Atmega32u2.
 \newblock http://www.atmel.com/devices/atmega32u2.aspx.
+
+\bibitem{gillian:grt}
+N.~Gillian.
+\newblock Gesture recognition toolkit.
+\newblock http://www.nickgillian.com/software/grt.
 
 \bibitem{intel:nuc}
 Intel.
@@ -22,7 +27,7 @@ C.~Miyama.
 
 \bibitem{openframeworks}
 openframeworks.
-\newblock http://openframeworks.jp.
+\newblock http://openframeworks.cc.
 
 \bibitem{parallax:propeller}
 Parallax.
@@ -42,11 +47,6 @@ D.~Shreiner, G.~Sellers, J.~Kessenich, and B.~Licea-Kane.
 \bibitem{ofxPd}
 D.~Wilcox.
 \newblock ofxpd.
-\newblock http://https://github.com/danomatika/ofxPd.
-
-\bibitem{Gesture recognition for musician computer interaction}
-D.~Wilcox.
-\newblock Gesture recognition for musician computer interaction.
 \newblock http://https://github.com/danomatika/ofxPd.
 
 \end{thebibliography}

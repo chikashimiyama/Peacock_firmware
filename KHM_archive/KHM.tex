@@ -14,7 +14,7 @@ Chikashi Miyama\\
 
 \maketitle
 \begin{abstract}
-Peacock is a box-shaped instrument for musical performances. Players of this instrument are able to control multiple musical parameters only by moving hand above the instrument. Peacock III, the newest version of Peacock, features a small embeded digital synthesizer, a multi-thread dedicated application, and gesture recognition system that provide players with more flexible, intuitive, and intimate interactions between the hands and electronic sound. 
+Peacock is a box-shaped instrument for musical performances. Players of this instrument are able to control multiple musical parameters only by moving hands above the instrument. Peacock III, the newest version of Peacock, features a small embedded digital synthesizer, a multi-thread dedicated application, and gesture recognition system. These features enable players to control electronic sound more flexibly and intuitively with the hand gestures.
 \end{abstract}
 
 \section{Background}
@@ -27,7 +27,7 @@ Peacock is a box-shaped instrument for musical performances. Players of this ins
        \label{fig:old_peacock}
 \end{figure}
 
-Peacock I, the first model of Peacock series, was developed by the author in 2009\cite{miyama:peacock}. It is a musical interface, equipped with 35 infrared proximity sensors that detect the movement of performer's hand. A microcontroller, installed in the interface, collects the data from the sensors and send them to a host computer. The host computer uses the received data for sound synthesis, employing Pure Data\cite{Pd}. Peacock I simply detects the distance between 35 infrared sensors and the hands and allows us to map these data to any arbitrary musical paramters, such as frequency, amplitude, or modulation depth.
+Peacock I, the first model of Peacock series, was developed by the author in 2009\cite{miyama:peacock}. It is a musical interface, equipped with 35 infrared proximity sensors that detect the distance between the sensors and the performer's hands. A microcontroller, installed in the interface, collects the data from the sensors, and send them to a host computer. A Pure Data\cite{Pd} patch, running on the host computer, maps the received data from the microcontroller onto the parameters of software synthesizer.
 
 Through five years of musical practice with Peacock I, several points for improvements were discovered:
 
@@ -42,17 +42,17 @@ Through five years of musical practice with Peacock I, several points for improv
 
 \item The main circuit board of Peacock I is soldered on a single universal board; the cost and labor for the reproduction poses a difficulty in the realization of duo, trio, or ensemble performances with multiple Peacocks.
 
-\item The system solely captures the low-level infomation (i.e. distance between obstacles and the sensors) and does not recognizes higher-level information, such as the position of the hands, the trajectries of hands (i.e. gestures), or specific posture of the hands. These information could be also mapped to musical parameters and commands.
+\item The system currently detects only low-level data from the sensors. By analyzing these low-level data, the detection of hand position and the recognition of hand gestures are possible. These high-level data could be also mapped onto musical parameters and musical commands.
 
 \end{enumerate}
 
-In 2011, this project received a DAAD research scholarship, and Peacock II, a new version of Peacock, was realized at ZKM, Karlsruhe, Germany. The new version solves the first two of abovementioned issues , by employing faster microcontroller\cite{parallax:propeller} and alternative infrared sensors.
+In 2011, this project received a DAAD research scholarship, and Peacock II, a new version of Peacock, was realized at ZKM, Karlsruhe, Germany. The new version solves the first two of abovementioned issues, by employing faster microcontroller\cite{parallax:propeller} and alternative infrared sensors.
 
 \section{Peacock III}
 
-As a solution to the rest of abovementioned issues, Peacock III, the newest version of Peacock, was designed and realized at Academy of Media Arts, Cologne in 2014.
+As a solution to the rest of issues, Peacock III, the newest version of Peacock, was designed and realized at Academy of Media Arts, Cologne in 2014.
 
-In order to improve the autonomy and mobility of the device, a small computer for the audio synthesis is embedded in the enclosure of Peacock III. It enables users to play Peacock without connecting it to an external laptop for audio synthesis; Peacock III can be employed as an autonomous electronic instrument, such as electric guitar or keyboard synthesizer. 
+In order to improve the autonomy and mobility of the device, a small computer for the audio synthesis is embedded in the enclosure of Peacock III. It enables users to play the instrument without connecting it to an external laptop for audio synthesis; Peacock III can be employed as an autonomous electronic instrument, such as electric guitar or keyboard synthesizer. 
 
 Furthermore, a PCB (Printed Circuit Board) is designed as a solution to the fourth and fifth issues. The PCB  denoises the signal from the sensors with hardware lowpass filters, and significantly reduces the cost and labor for the reproduction. 
 
@@ -68,25 +68,25 @@ As a solution for the last issue, a C++ program was developed for gesture recogn
 \end{figure}
 
 In terms of hardware, Peacock III consists of two components;\\
-\textbf{main unit} and \textbf{interface board}. The interface board is a 100mm x 60 mm-sized PCB (printed circuit board), that collects the data from all 35 sensors, digitize them, and forward them to the main unit. It is also equipped with four buttons and a text LCD as a interface for the general system operation.
+\textbf{interface board} and \textbf{main unit}. The interface board is a 100mm x 60 mm-sized PCB (printed circuit board), that collects the data from all 35 sensors, digitize them, and forward them to the main unit. It is also equipped with four buttons and a text LCD as a interface for the general system operation.
 
-The main unit, an embeded small computer (102 mm x 102 mm) in the enclosure, analyzes the incoming data from the interface board, maps them onto the parameters of software synthesizers, and generates sound. Optionally, the main unit visualizes the incoming data.
+The main unit, an embeded small computer (102 mm x 102 mm) in the enclosure, analyzes the data from the interface board, maps them onto the parameters of software synthesizers, and generates sound. Optionally, the main unit visualizes the incoming data.
 
 \section{Interface Board} % (fold)
 
 \begin{figure}[htbp]
        \begin{center}
-              \includegraphics[width=1\columnwidth]{board}
+              \includegraphics[width=0.9\columnwidth]{board}
        \end{center}
        \caption{The PCB of Peacock III}
        \label{fig:board}
 \end{figure}
 
-The interface board comprises an ATMega 32U2 microcontroller\cite{atmel:avr}, five external 12 bit ADCs, a text LCD, 4 buttons and a LED. The main functionalities of the interface board are as follows:
+The interface board comprises an ATMega 32U2 microcontroller\cite{atmel:avr}, five external 12 bit ADCs, a text LCD, 4 buttons and a Text LCD. The main functionalities of the interface board are as follows:
 
 \begin{enumerate}
-       \item stabilization of the sensor power supply, employing onboard capacitors
-       \item digitization of the signal from sensors with 5 external ADCs
+       \item stabilization of the sensor power supply by onboard capacitors
+       \item digitization of the signal from sensors by 5 ADCs
        \item to provide interfaces for basic operation of the system with the buttons
        \item status indication of the system, using the small LCD
        \item data transfer to the main unit via a USB cable
@@ -94,14 +94,14 @@ The interface board comprises an ATMega 32U2 microcontroller\cite{atmel:avr}, fi
 
 \begin{figure}[htbp]
        \begin{center}
-              \includegraphics[width=1\columnwidth]{Peacock_hardware.pdf}
+              \includegraphics[width=0.9\columnwidth]{Peacock_hardware.pdf}
        \end{center}
        \caption{The Peacock III Hardware}
        \label{fig:peacock}
 \end{figure}
 
 \subsubsection{Hardware signal stabilization} % (fold)
-The signal from infrared proximity sensors, employed by Peacock, includes significant amount of noise. In the previous version of Peacock, the signal was denoised in the software by applying digital low pass filters to all incoming digital data. However, The PCB of Peacock III is equipped with capcitors for each infrared sensor in order to stabilize its power supply. Since the noise is caused by the rapid current draw that result from pulsations generated by the emitter of the infrared sensors, The stabilization of the power supply removes a significant amount of noise from the analog output signal.
+The signal from infrared proximity sensors, employed by Peacock, contains significant amount of noise. In the previous version of Peacock, the signal was denoised in the software by applying digital low pass filters to all incoming digital data. However, The PCB of Peacock III is equipped with capcitors for each infrared sensor in order to stabilize its power supply. Since the noise is caused by the rapid current draw that result from pulsations generated by the emitter of the infrared sensors, The stabilization of the power supply removes a significant amount of noise from the analog output signal.
 
 \subsubsection{data collection} % (fold)
 In order to collect data from all 35 infrared sensors, five 8 channel 12 bit A/D converters (MCP3208) are installed on the board and they communicates with AVR ATMega 32U2, the main microcontroller on the interface board, using SPI (Serial Periferal Interface) protocol. In the microcontroller, the collected data are packed in 39 bytes-long serial packets, consisting of one byte of start delimeter, end delimeter, message ID, check sum and 35 bytes of actual data from the sensors.
@@ -141,7 +141,7 @@ PeacockApp is an openFrameworks\cite{openframeworks}-based program written in C+
 
 The {\it Gesture Recognizer} modules currently detects, the presence and number of hands above the hardware, the estimated position of two hands, and the centroid of each row and column.  If this module find a new gesture, a notification to other two modules will be immediately sent\ref{fig:modules}.
 
-Based on the information of hand positions, this module trances the trajectories of the hands and classifies the gesture. For this end,  SVM (Supported Vector Machine), a common classification algorithm of machine learning was utilized. For the implementation of the algorithm, Gesture Recognition Toolkit by Nick Gillian is employed.
+Based on the information of hand positions, this module trances the trajectories of the hands and classifies the gesture. For this end,  SVM (Supported Vector Machine), a common classification algorithm of machine learning was utilized. For the implementation of the algorithm, Gesture Recognition Toolkit \cite{gillian:grt} by Nick Gillian is employed.
 
 \subsubsection{Sound Generator: PckSynthesizer}
 
@@ -149,10 +149,10 @@ The sound generator module is programmed with Pd\cite{Pd}. ofxPd\cite{ofxPd}, an
  
 \subsubsection{Visualizer: PckVisualizer}
 
-Unlike piano, cello, or other acoustic instruments, the player of Peacock controls musical parameters by simply moving hand above the device; There is no physical feedback from the instrument. In order to improve accurate parameter control by the performer, a visualizer is developed.  The visualizer indicates the values of from 35 infrared sensors  the assumed position of hands, chronological trail of hand movement, and recognized gestures, in  3D model programmed with OpenGL\cite{OpenGL}. The renderered 3D images can be displayed by attaching an optional HDMI-compatible monitor to the device.
-The visualizer can be deactivated by the user by the attached buttons.
+Unlike acoustic instruments, players of Peacock controls musical parameters by simply moving hand above the device; There is no physical feedback from the instrument to their hands. In order to train more accurate parameter control by performers, a visualizer for the incoming data was developed.  The visualizer shows the values from 35 infrared sensors, the position of hands, the trajectory of hand movements, and detected gestures in  3D model programmed with OpenGL\cite{OpenGL}. The renderered 3D images can be displayed by attaching an optional HDMI-compatible monitor to the device.
+The visualizer can be deactivated by the user, using the attached buttons on the side panel of the enclosure.
 
-In order to minimize the latency and maximize the efficiency of the data processing, These three modules runs on three separate threads in PeacockApp. 
+In order to minimize the latency and maximize the efficiency of the data processing, these three modules run on three separate threads in PeacockApp. 
 
 \begin{figure}[htbp]
        \begin{center}
